@@ -45,11 +45,6 @@ Once running, the API is available at:
 - **Get user balance** → `GET http://localhost:8080/api/users/{userId}/balance`
 
 ## Deploying on Render
-To deploy, make sure:
-- Your database is **H2 file-based** (`jdbc:h2:file:./data/testdb`).
-- You **enable the H2 console** for debugging.
-
-Then, deploy on **Render** and access:
 ```
 https://campaigns-mvur.onrender.com/
 ```
