@@ -4,13 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class CampaignDto {
     private int id;
     private String campaignName;
-    private String keywords;
+    private List<String> keywords;
     private double bidAmount;
     private double campaignFund;
     private String status;

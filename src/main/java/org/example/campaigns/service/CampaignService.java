@@ -1,7 +1,6 @@
 package org.example.campaigns.service;
 
 import org.example.campaigns.dto.CampaignDto;
-import org.example.campaigns.entity.Campaign;
 
 import java.util.List;
 

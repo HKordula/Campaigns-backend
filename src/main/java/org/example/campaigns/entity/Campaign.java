@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,7 +19,8 @@ public class Campaign {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String campaignName;
-    private String keywords;
+    @ElementCollection
+    private List<String> keywords;
     private double bidAmount;
     private double campaignFund;
     private String status;
