@@ -2,6 +2,7 @@ package org.example.campaigns.mapper;
 
 import org.example.campaigns.dto.CampaignDto;
 import org.example.campaigns.entity.Campaign;
+import org.example.campaigns.entity.User;
 
 public class CampaignMapper {
 
@@ -14,11 +15,12 @@ public class CampaignMapper {
                 campaign.getCampaignFund(),
                 campaign.getStatus(),
                 campaign.getTown(),
-                campaign.getRadius()
+                campaign.getRadius(),
+                campaign.getUser().getId()
         );
     }
 
-    public static Campaign mapToCampaign(CampaignDto campaignDto) {
+    public static Campaign mapToCampaign(CampaignDto campaignDto, User user) {
         return new Campaign(
                 campaignDto.getId(),
                 campaignDto.getCampaignName(),
@@ -27,7 +29,8 @@ public class CampaignMapper {
                 campaignDto.getCampaignFund(),
                 campaignDto.getStatus(),
                 campaignDto.getTown(),
-                campaignDto.getRadius()
+                campaignDto.getRadius(),
+                user
         );
     }
 }

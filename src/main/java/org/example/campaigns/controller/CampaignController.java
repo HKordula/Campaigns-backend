@@ -17,9 +17,9 @@ public class CampaignController {
     private final CampaignService campaignService;
 
     // Add Campaign REST API
-    @PostMapping
-    public ResponseEntity<CampaignDto> addCampaign(@RequestBody CampaignDto campaignDto) {
-        CampaignDto savedCampaign = campaignService.addCampaign(campaignDto);
+    @PostMapping("/{userId}")
+    public ResponseEntity<CampaignDto> addCampaign(@PathVariable Integer userId, @RequestBody CampaignDto campaignDto) {
+        CampaignDto savedCampaign = campaignService.addCampaign(userId, campaignDto);
         return new ResponseEntity<>(savedCampaign, HttpStatus.CREATED);
     }
 

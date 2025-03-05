@@ -5,7 +5,7 @@ import org.example.campaigns.dto.CampaignDto;
 import java.util.List;
 
 public interface CampaignService {
-    CampaignDto addCampaign(CampaignDto campaignDto);
+    CampaignDto addCampaign(Integer userId, CampaignDto campaignDto);
 
     CampaignDto getCampaignById(Integer id);
 

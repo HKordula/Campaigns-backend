@@ -18,4 +18,5 @@ public class CampaignDto {
     private String status;
     private String town;
     private int radius;
+    private int userId;
 }
